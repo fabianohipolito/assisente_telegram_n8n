@@ -4,7 +4,7 @@ Projeto de automação desenvolvido com **n8n**, integrado ao **Telegram** e **G
 
 O projeto demonstra na prática a criação de workflows, integração com APIs, utilização de Webhooks e automação de processos.
 
-<img src="menu_telegram_1.png" width="500">
+<img src="screenshots/menu_telegram_1.png" width="500">
 
 ---
 
@@ -21,7 +21,7 @@ O projeto demonstra na prática a criação de workflows, integração com APIs,
 * 🔄 Processamento automático dos dados
 * 💬 Retorno das operações diretamente no Telegram
 
-<img src="menu_telegram_2.png" width="500">
+<img src="screenshots/menu_telegram_2.png" width="500">
 
 ---
 
@@ -114,7 +114,7 @@ Docker
 
 O **Cloudflare Tunnel** é utilizado para disponibilizar o Webhook externamente.
 
-<img src="n8n.png" width="800">
+<img src="screenshots/n8n.png" width="800">
 
 ---
 
