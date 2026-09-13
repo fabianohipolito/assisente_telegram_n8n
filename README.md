@@ -1,1 +1,218 @@
-# assisente_telegram_n8n
+# 🤖 Automação Telegram com n8n
+
+Projeto de automação desenvolvido com **n8n**, integrado ao **Telegram** e **Google Sheets**, permitindo realizar operações através de um bot com menus e botões interativos.
+
+O projeto foi desenvolvido para demonstrar na prática a criação de workflows, integração com APIs, utilização de Webhooks e automação de processos.
+
+---
+
+## 🚀 Funcionalidades
+
+* 🤖 Integração com Telegram Bot
+* 🔗 Recebimento de eventos através de Webhook
+* 📋 Listagem de registros
+* ➕ Inclusão de registros
+* ✏️ Alteração de registros
+* 🗑️ Exclusão de registros
+* 🔘 Menus e botões interativos
+* 📊 Integração com Google Sheets
+* 🔄 Processamento automático dos dados
+* 💬 Retorno das operações diretamente no Telegram
+
+---
+
+## 🏗️ Arquitetura
+
+```text
+┌──────────────┐
+│   Telegram   │
+│     Bot      │
+└──────┬───────┘
+       │
+       │ HTTPS
+       ▼
+┌──────────────┐
+│  Cloudflare  │
+│    Tunnel    │
+└──────┬───────┘
+       │
+       │
+       ▼
+┌──────────────┐
+│     n8n      │
+│    Docker    │
+│    Local     │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│ Google Sheets│
+└──────────────┘
+```
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+| Tecnologia            | Utilização                              |
+| --------------------- | --------------------------------------- |
+| **n8n**               | Criação e execução dos workflows        |
+| **Docker**            | Execução local do n8n                   |
+| **Docker Compose**    | Gerenciamento do ambiente do n8n        |
+| **Telegram Bot API**  | Comunicação com o bot                   |
+| **Webhook**           | Recebimento dos eventos do Telegram     |
+| **Cloudflare Tunnel** | Exposição do n8n local através de HTTPS |
+| **Google Sheets API** | Armazenamento e manipulação dos dados   |
+| **Git / GitHub**      | Versionamento e documentação            |
+
+---
+
+## 🔗 Webhook
+
+O **n8n é executado localmente através do Docker**.
+
+Como o Telegram precisa acessar o Webhook através da internet, foi utilizado o **Cloudflare Tunnel** para criar uma conexão entre uma URL pública HTTPS e o n8n executado localmente.
+
+### Fluxo do Webhook
+
+```text
+Telegram
+   │
+   │ Requisição HTTPS
+   ▼
+Cloudflare Tunnel
+   │
+   │ Encaminhamento
+   ▼
+n8n local
+   │
+   ▼
+Webhook
+   │
+   ▼
+Workflow
+```
+
+Dessa forma, o Telegram consegue enviar os eventos para o workflow mesmo com o n8n sendo executado localmente.
+
+---
+
+## 🐳 Ambiente de execução
+
+O n8n é executado localmente utilizando **Docker Compose**.
+
+```text
+Docker
+   │
+   └── n8n
+       │
+       ├── Workflows
+       ├── Webhooks
+       └── Integrações
+```
+
+O **Cloudflare Tunnel** é utilizado para disponibilizar o Webhook externamente.
+
+---
+
+## 📱 Funcionamento
+
+A interação começa no Telegram.
+
+O usuário acessa o menu do bot e seleciona a operação desejada.
+
+```text
+Usuário
+   ↓
+Telegram
+   ↓
+Webhook
+   ↓
+n8n
+   ↓
+Menu
+   ↓
+┌──────────────┐
+│ ➕ Incluir   │
+│ ✏️ Alterar   │
+│ 🗑️ Excluir  │
+│ 📋 Listar    │
+└──────────────┘
+   ↓
+Processamento
+   ↓
+Google Sheets
+   ↓
+Resultado
+   ↓
+Telegram
+```
+
+---
+
+## 📋 Operações disponíveis
+
+### ➕ Incluir
+
+Permite adicionar um novo registro através do Telegram.
+
+### ✏️ Alterar
+
+Permite localizar um registro e atualizar suas informações.
+
+### 🗑️ Excluir
+
+Permite selecionar um registro e realizar sua exclusão.
+
+### 📋 Listar
+
+Permite consultar os registros armazenados e apresentar os resultados no Telegram.
+
+---
+
+## 📸 Demonstração
+
+### Workflow no n8n
+
+![Workflow](screenshots/fluxo.png)
+
+### Menu do Telegram
+
+![Menu Telegram](screenshots/menu-telegram.png)
+
+### Operações
+
+![Operações](screenshots/operacoes.png)
+
+---
+
+## 🔐 Segurança
+
+As credenciais utilizadas no projeto não são disponibilizadas neste repositório.
+
+Tokens, chaves de API e outras informações sensíveis não devem ser compartilhados publicamente no GitHub.
+
+---
+
+## 🎯 Objetivo do projeto
+
+Este projeto tem como objetivo demonstrar conhecimentos práticos em:
+
+* Automação de processos
+* Criação de workflows
+* Webhooks
+* APIs
+* Integração entre sistemas
+* Docker
+* Docker Compose
+* Telegram Bot
+* Google Sheets
+* Git e GitHub
+
+---
+
+## 👨‍💻 Autor
+
+**Fabiano Hipolito**
+
+Projeto desenvolvido para portfólio e demonstração prática de conhecimentos em **automação, APIs, Docker e integração de sistemas**.
