@@ -2,7 +2,9 @@
 
 Projeto de automação desenvolvido com **n8n**, integrado ao **Telegram** e **Google Sheets**, permitindo realizar operações através de um bot com menus e botões interativos.
 
-O projeto foi desenvolvido para demonstrar na prática a criação de workflows, integração com APIs, utilização de Webhooks e automação de processos.
+O projeto demonstra na prática a criação de workflows, integração com APIs, utilização de Webhooks e automação de processos.
+
+<img src="menu_telegram_1.png" width="500">
 
 ---
 
@@ -18,6 +20,8 @@ O projeto foi desenvolvido para demonstrar na prática a criação de workflows,
 * 📊 Integração com Google Sheets
 * 🔄 Processamento automático dos dados
 * 💬 Retorno das operações diretamente no Telegram
+
+<img src="menu_telegram_2.png" width="500">
 
 ---
 
@@ -35,7 +39,6 @@ O projeto foi desenvolvido para demonstrar na prática a criação de workflows,
 │  Cloudflare  │
 │    Tunnel    │
 └──────┬───────┘
-       │
        │
        ▼
 ┌──────────────┐
@@ -93,8 +96,6 @@ Webhook
 Workflow
 ```
 
-Dessa forma, o Telegram consegue enviar os eventos para o workflow mesmo com o n8n sendo executado localmente.
-
 ---
 
 ## 🐳 Ambiente de execução
@@ -112,6 +113,8 @@ Docker
 ```
 
 O **Cloudflare Tunnel** é utilizado para disponibilizar o Webhook externamente.
+
+<img src="n8n.png" width="800">
 
 ---
 
@@ -170,27 +173,10 @@ Permite consultar os registros armazenados e apresentar os resultados no Telegra
 
 ---
 
-## 📸 Demonstração
-
-### Workflow no n8n
-
-![Workflow](screenshots/fluxo.png)
-
-### Menu do Telegram
-
-![Menu Telegram](screenshots/menu-telegram.png)
-
-### Operações
-
-![Operações](screenshots/operacoes.png)
-
----
-
 ## 🔐 Segurança
 
 As credenciais utilizadas no projeto não são disponibilizadas neste repositório.
 
-Tokens, chaves de API e outras informações sensíveis não devem ser compartilhados publicamente no GitHub.
 
 ---
 
@@ -198,7 +184,7 @@ Tokens, chaves de API e outras informações sensíveis não devem ser compartil
 
 Este projeto tem como objetivo demonstrar conhecimentos práticos em:
 
-* Automação de processos
+* N8N
 * Criação de workflows
 * Webhooks
 * APIs
@@ -215,4 +201,4 @@ Este projeto tem como objetivo demonstrar conhecimentos práticos em:
 
 **Fabiano Hipolito**
 
-Projeto desenvolvido para portfólio e demonstração prática de conhecimentos em **automação, APIs, Docker e integração de sistemas**.
+Projeto desenvolvido para portfólio e demonstração prática de conhecimentos em **automação com n8n, APIs, Docker e integração de sistemas **.
